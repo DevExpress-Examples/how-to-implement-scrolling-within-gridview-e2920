@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="EnableScrollingDynamically.MvcApplication" Language="C#" %>

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<object>
+
+@Html.DevExpress().GridView(settings => {
+    settings.Name = "GridView";
+    settings.Width = Unit.Pixel(600);
+    settings.CallbackRouteValues = new { Controller = "Home", Action = "GridViewPartial" };
+    settings.KeyFieldName = "ID";
+    settings.Columns.Add("ID").Width=150;
+    settings.Columns.Add("A").Width = 150;
+    settings.Columns.Add("B").Width = 150;
+    settings.Columns.Add("C").Width = 150;
+    settings.Columns.Add("D").Width = 150;
+    settings.SettingsPager.Mode = GridViewPagerMode.ShowAllRecords;
+    if (Session["enableScroll"] != null) {
+        if ((bool)Session["enableScroll"]) {
+            settings.Settings.VerticalScrollBarMode = ScrollBarMode.Visible;
+            settings.Settings.VerticalScrollableHeight = 300;
+            settings.Settings.HorizontalScrollBarMode = ScrollBarMode.Visible;
+        }
+        else {
+            settings.Settings.VerticalScrollBarMode = ScrollBarMode.Hidden;
+            settings.Settings.HorizontalScrollBarMode = ScrollBarMode.Hidden;
+        }
+    }
+
+}).Bind(Model).GetHtml()
