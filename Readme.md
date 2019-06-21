@@ -6,6 +6,9 @@
 * [Index.cshtml](./CS/EnableScrollingDynamically/Views/Home/Index.cshtml)
 <!-- default file list end -->
 # How to implement scrolling within GridView
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/e2920)**
+<!-- run online end -->
 
 
 <p>This sample demonstrates how to dynamically enable the GridView's vertical and horizontal scrolling.</p>
